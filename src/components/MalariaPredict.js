@@ -44,7 +44,7 @@ export default function MalariaPredict() {
         if (file) {
             const formData = new FormData();
             formData.append("image", file);
-            const data = await fetch("https://flask-production-6bd2.up.railway.app/predict", {
+            const data = await fetch("http://localhost:5000/predict", {
                 method: 'POST',
                 body: formData,
             });
@@ -66,7 +66,7 @@ export default function MalariaPredict() {
         setOutput(null);
         setPredicted(null)
 
-        const imageUpload = await fetch(process.env.REACT_APP_HOST+"/uploadImage", {
+        const imageUpload = await fetch("http://localhost:4000/api/uploadImage", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

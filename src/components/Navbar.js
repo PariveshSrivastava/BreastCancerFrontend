@@ -57,7 +57,7 @@ export default function NavbarUser(props) {
                                                 <li className="p-3 block lg:mb-0 mb-2">
                                                     <Link to="/ImageProcessing"
                                                         className="bg-teal-500 hover:bg-teal-400 text-white px-3 py-2 rounded-full text-md font-medium shadow hover:shadow-md focus:outline-none"
-                                                        aria-current="page">ImageProcessing</Link>
+                                                        aria-current="page">NucleiSegmentation</Link>
                                                 </li>
                                                 <li className="p-3 block lg:mb-0 mb-2">
                                                     <Link to="/MalariaPredict"
@@ -67,7 +67,7 @@ export default function NavbarUser(props) {
                                                 <li className="p-3 block lg:mb-0 mb-2">
                                                     <Link to="/ImageRetrival"
                                                         className="bg-teal-500 hover:bg-teal-400 text-white px-3 py-2 rounded-full text-md font-medium shadow hover:shadow-md focus:outline-none"
-                                                        aria-current="page">History</Link>
+                                                        aria-current="page">MalariaDB</Link>
                                                 </li>
                                                 <li className="p-3 block lg:mb-0 mb-2">
                                                     <Link to="" onClick={logout}
