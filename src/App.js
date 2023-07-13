@@ -13,7 +13,7 @@ import MalariaPredict from './components/MalariaPredict.js';
 import BreastCancerPredict from './components/BreastCancerPredict.js';
 import ImageRetrival from './components/ImageRetrival.js';
 import ImageProcessing from './components/ImageProcessing.js';
-
+ 
 export default function App() {
   return (
     <>
