@@ -134,7 +134,7 @@ export default function ImageProcessing() {
         <>
             <div className="bg-gray-100">
                 <p className="text-center text-5xl pt-14 text-gray-400">
-                    Image Processing
+                    Nuclei Segementation
                 </p>
 
                 <div className="flex items-center justify-center p-12">
