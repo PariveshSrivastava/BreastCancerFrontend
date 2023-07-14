@@ -114,41 +114,55 @@ export default function ImageRetrieval() {
 
   return (
     <>
-      <h1 className="fw-light">Previous Prediction Results</h1>
-      <table className="flex table-hover items-center justify-center w-auto" id="tab">
-        <thead className="bg-dark text-white sticky-top">
-          <tr>
-            <th>Image</th>
-            <th className="text-center">Prediction</th>
-            <th className="text-center">Label</th>
-          </tr>
-        </thead>
-        <tbody>
-          {images.length > 0 ? (
-            images.map((image) => (
-              <tr key={image._id}>
-                <td>
-                  <img className="img-thumbnail" src={image.img} alt="input" />
-                </td>
-                <td className="text-center">{image.prediction}</td>
-                <td className="text-center">
-                  {image.truth ? (
-                    <p className="text-success">Correct</p>
-                  ) : (
-                    <p className="text-danger">Wrong</p>
-                  )}
+      <h1 className="font-light text-2xl text-center">Previous Prediction Results</h1>
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-gray-200 border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="py-2 px-4">Image</th>
+              <th className="py-2 px-4 text-center">Prediction</th>
+              <th className="py-2 px-4 text-center">Label</th>
+            </tr>
+          </thead>
+          <tbody>
+            {images.length > 0 ? (
+              images.map((image) => (
+                <tr key={image._id} className="border-b border-gray-300">
+                  <td className="py-2 px-4 text-center">
+                    <img
+                      className="mx-auto h-16 w-16 object-cover rounded-md"
+                      src={image.img}
+                      alt="input"
+                    />
+                  </td>
+                  <td className="py-2 px-4 text-center">
+                    {image.prediction > 0.5 ? (
+                      <span className="text-red-500">Paracitised</span>
+                    ) : (
+                      <span className="text-green-500">Non-paracitised</span>
+                    )}
+                  </td>
+                  <td className="py-2 px-4 text-center">
+                    {image.truth ? (
+                      <span className="text-green-500">Correct</span>
+                    ) : (
+                      <span className="text-red-500">Wrong</span>
+                    )}
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="3" className="py-4 px-6 text-center">
+                  <p>No images found</p>
                 </td>
               </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="3">
-                <p className="text-center">No images found</p>
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+            )}
+          </tbody>
+        </table>
+      </div>
     </>
+
+
   );
 }

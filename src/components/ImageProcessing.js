@@ -48,47 +48,6 @@ export default function ImageProcessing() {
     };
 
 
-    // const handleReinhardtNormalization = async () => {
-    //     const formData = new FormData();
-    //     formData.append('input_image', selectedFile);
-
-    //     try {
-    //         const response = await fetch('http://localhost:5002/api/reinhard-normalization', {
-    //             method: 'POST',
-    //             body: formData,
-    //         })
-
-    //         if (!response.ok) {
-    //             throw new Error('Request failed with status ' + response.status);
-    //         }
-    //         const responseData = await response.json();
-    //         console.log(responseData);
-    //         setResult(responseData);
-    //         setNormalizedImage(responseData.normalized_image);
-
-    //     } catch (error) {
-    //         console.error(error);
-    //     };
-    // }
-    // const handleCompleteCode = () => {
-    //     const formData = new FormData();
-    //     formData.append('input_image', selectedFile);
-
-    //     fetch('http://localhost:5002/api/execute-notebook', {
-    //         method: 'POST',
-    //         body: formData
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setResult(data);
-    //             setMaskOverlayImage(`data:image/png;base64,${data.mask_overlay}`);
-    //             setBoundingBoxesImage(`data:image/png;base64,${data.bounding_boxes}`);
-    //         })
-    //         .catch(error => {
-    //             console.error(error);
-    //         });
-    // };
-
     return (
         // <div className="bg-gray-100">
         //     <p className="text-center text-5xl pt-14 text-gray-400">
