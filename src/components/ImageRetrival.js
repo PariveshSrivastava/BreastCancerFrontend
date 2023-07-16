@@ -114,10 +114,10 @@ export default function ImageRetrieval() {
 
   return (
     <>
-      <h1 className="font-light text-2xl text-center">Previous Prediction Results</h1>
+      <h1 className="font-light text-2xl text-center p-2">Previous Prediction Results</h1>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-gray-200 border border-gray-300">
-          <thead className="bg-gray-800 text-white">
+          <thead className="bg-teal-500 text-white">
             <tr>
               <th className="py-2 px-4">Image</th>
               <th className="py-2 px-4 text-center">Prediction</th>

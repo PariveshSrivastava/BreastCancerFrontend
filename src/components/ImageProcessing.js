@@ -47,7 +47,6 @@ export default function ImageProcessing() {
             });
     };
 
-
     return (
         // <div className="bg-gray-100">
         //     <p className="text-center text-5xl pt-14 text-gray-400">

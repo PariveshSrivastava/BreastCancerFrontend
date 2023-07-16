@@ -16,7 +16,7 @@ export default function SignUp() {
     const [otpverify, setOtpverify] = useState(false)
 
     async function sendOtp() {
-        console.log(process.env.REACT_APP_HOST)
+        console.log("sendOTP",process.env.REACT_APP_HOST)
         const response = await fetch(process.env.REACT_APP_HOST+'/sendotp', {
             method: 'POST',
             headers: {
