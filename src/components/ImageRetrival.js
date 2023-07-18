@@ -87,7 +87,7 @@ export default function ImageRetrieval() {
   useEffect(() => {
     async function getImages() {
       try {
-        const response = await fetch('http://localhost:4000/api/fetchImage', {
+        const response = await fetch(process.env.REACT_APP_HOST+'/fetchImage', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
