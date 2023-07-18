@@ -137,7 +137,7 @@ export default function SignUp() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 type="email"
-                                placeholder="Number"
+                                placeholder="Email"
                                 className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-emerald-500 focus:ring-1 rounded-full" />
 
                             <label className="block mt-2 font-semibold text-sm"> Phone Nubmber </label>
