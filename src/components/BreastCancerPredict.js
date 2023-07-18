@@ -174,7 +174,7 @@ export default function BreastCancerPredict() {
       const formData = new FormData();
       formData.append('image', file);
       try {
-        const response = await fetch(process.env.YOLO_MODEL+'/yolov5', {
+        const response = await fetch('http://localhost:5001/api/yolov5', {
           method: 'POST',
           body: formData,
           headers: {
