@@ -83,7 +83,7 @@ export default function ImageRetrieval() {
   }
 
   let username = dataToken.name;
-
+  
   useEffect(() => {
     async function getImages() {
       try {

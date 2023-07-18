@@ -66,7 +66,7 @@ export default function MalariaPredict() {
         setOutput(null);
         setPredicted(null)
 
-        const imageUpload = await fetch("http://localhost:4000/api/uploadImage", {
+        const imageUpload = await fetch(process.env.REACT_APP_HOST+"/uploadImage", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
